@@ -1,0 +1,103 @@
+{
+  "state": "OH",
+  "state_name": "Ohio",
+  "medicaid_expansion": true,
+  "note": "Ohio expanded Medicaid. Adults up to 138% FPL qualify. Ohio Works First is the state TANF program.",
+  "programs": [
+    {
+      "id": "oh_snap",
+      "name": "SNAP (Ohio)",
+      "full_name": "Supplemental Nutrition Assistance Program — Ohio",
+      "agency": "ODJFS",
+      "category": "food",
+      "description": "Ohio administers federal SNAP (called Food Assistance in Ohio). Apply through the Ohio Benefits portal.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_ohio_benefits", "in_person", "phone"],
+        "where": "benefits.ohio.gov or local County Department of Job and Family Services",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "ohio"]
+    },
+    {
+      "id": "oh_medicaid",
+      "name": "Ohio Medicaid",
+      "full_name": "Ohio Medicaid",
+      "agency": "ODM",
+      "category": "healthcare",
+      "description": "Ohio expanded Medicaid covers adults up to 138% FPL. Children covered up to 206% FPL. No premium for most enrollees.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Full health coverage."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 200,
+          "note": "Ohio expanded Medicaid — adults up to 138% FPL qualify."
+        }
+      },
+      "application": {
+        "method": ["online_ohio_benefits", "healthcare_gov", "in_person", "phone_1800_324_8680"],
+        "where": "benefits.ohio.gov or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Ohio residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "ohio", "expanded"]
+    },
+    {
+      "id": "oh_tanf",
+      "name": "Ohio Works First (TANF)",
+      "full_name": "Ohio Works First — Temporary Assistance for Needy Families",
+      "agency": "ODJFS",
+      "category": "cash",
+      "description": "Ohio's TANF program provides monthly cash assistance to families with children under 18. A family of 3 can receive up to approximately $514/month.",
+      "monthly_benefit_range": {
+        "min_usd": 200,
+        "max_usd": 514,
+        "note": "Maximum approximately $514/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18 (or 19 if full-time student)",
+        "income": {
+          "note": "Income and work participation requirements apply"
+        },
+        "time_limit": "36-month state limit (Ohio stricter than federal 60-month)"
+      },
+      "application": {
+        "method": ["online_ohio_benefits", "in_person"],
+        "where": "benefits.ohio.gov or local County JFS office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "ohio"]
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "states": {
+    "AL": {
+      "name": "Alabama",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 312,
+      "tanf_max_monthly_family3": 215,
+      "snap_portal": "https://mydhhr.alabama.gov",
+      "medicaid_portal": "https://medicaid.alabama.gov",
+      "benefits_portal": "https://mydhhr.alabama.gov"
+    },
+    "AK": {
+      "name": "Alaska",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 175,
+      "tanf_max_monthly_family3": 923,
+      "snap_portal": "https://mybenefits.alaska.gov",
+      "medicaid_portal": "https://health.alaska.gov/dpa/Pages/medicaid/default.aspx",
+      "benefits_portal": "https://mybenefits.alaska.gov"
+    },
+    "AZ": {
+      "name": "Arizona",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 278,
+      "snap_portal": "https://des.az.gov/services/basic-needs/food-assistance-snap",
+      "medicaid_portal": "https://healthearizonaplus.gov",
+      "benefits_portal": "https://healthearizonaplus.gov"
+    },
+    "AR": {
+      "name": "Arkansas",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 211,
+      "tanf_max_monthly_family3": 204,
+      "snap_portal": "https://access.arkansas.gov",
+      "medicaid_portal": "https://medicaid.mmis.arkansas.gov",
+      "benefits_portal": "https://access.arkansas.gov"
+    },
+    "CA": {
+      "name": "California",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 322,
+      "tanf_max_monthly_family3": 1098,
+      "snap_portal": "https://www.getcalfresh.org",
+      "medicaid_portal": "https://www.coveredca.com",
+      "benefits_portal": "https://benefitscal.com"
+    },
+    "CO": {
+      "name": "Colorado",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 260,
+      "tanf_max_monthly_family3": 508,
+      "snap_portal": "https://peak.my.salesforce-sites.com",
+      "medicaid_portal": "https://peak.my.salesforce-sites.com",
+      "benefits_portal": "https://peak.my.salesforce-sites.com"
+    },
+    "CT": {
+      "name": "Connecticut",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 323,
+      "tanf_max_monthly_family3": 698,
+      "snap_portal": "https://www.connect.ct.gov",
+      "medicaid_portal": "https://www.connect.ct.gov",
+      "benefits_portal": "https://www.connect.ct.gov"
+    },
+    "DE": {
+      "name": "Delaware",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 338,
+      "snap_portal": "https://assist.dhss.delaware.gov",
+      "medicaid_portal": "https://assist.dhss.delaware.gov",
+      "benefits_portal": "https://assist.dhss.delaware.gov"
+    },
+    "DC": {
+      "name": "District of Columbia",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 323,
+      "tanf_max_monthly_family3": 658,
+      "snap_portal": "https://dhs.dc.gov/service/snap",
+      "medicaid_portal": "https://dhs.dc.gov/service/medicaid",
+      "benefits_portal": "https://dhs.dc.gov"
+    },
+    "FL": {
+      "name": "Florida",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 210,
+      "tanf_max_monthly_family3": 303,
+      "snap_portal": "https://www.myflfamilies.com/services/public-assistance",
+      "medicaid_portal": "https://www.myflfamilies.com/services/public-assistance",
+      "benefits_portal": "https://www.myflfamilies.com/services/public-assistance"
+    },
+    "GA": {
+      "name": "Georgia",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 247,
+      "tanf_max_monthly_family3": 280,
+      "snap_portal": "https://gateway.ga.gov",
+      "medicaid_portal": "https://gateway.ga.gov",
+      "benefits_portal": "https://gateway.ga.gov"
+    },
+    "HI": {
+      "name": "Hawaii",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 300,
+      "tanf_max_monthly_family3": 610,
+      "snap_portal": "https://pais.dhs.hawaii.gov",
+      "medicaid_portal": "https://medquest.hawaii.gov",
+      "benefits_portal": "https://pais.dhs.hawaii.gov"
+    },
+    "ID": {
+      "name": "Idaho",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 185,
+      "tanf_max_monthly_family3": 309,
+      "snap_portal": "https://www.idahobenefits.gov",
+      "medicaid_portal": "https://healthandwelfare.idaho.gov/medicaid",
+      "benefits_portal": "https://www.idahobenefits.gov"
+    },
+    "IL": {
+      "name": "Illinois",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 313,
+      "tanf_max_monthly_family3": 432,
+      "snap_portal": "https://abe.illinois.gov",
+      "medicaid_portal": "https://abe.illinois.gov",
+      "benefits_portal": "https://abe.illinois.gov"
+    },
+    "IN": {
+      "name": "Indiana",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 250,
+      "tanf_max_monthly_family3": 288,
+      "snap_portal": "https://www.in.gov/fssa/dfr/snap",
+      "medicaid_portal": "https://www.in.gov/fssa/mma",
+      "benefits_portal": "https://www.in.gov/fssa"
+    },
+    "IA": {
+      "name": "Iowa",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 302,
+      "tanf_max_monthly_family3": 426,
+      "snap_portal": "https://dhs.iowa.gov/food-assistance",
+      "medicaid_portal": "https://dhs.iowa.gov/medicaid",
+      "benefits_portal": "https://dhs.iowa.gov"
+    },
+    "KS": {
+      "name": "Kansas",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 238,
+      "tanf_max_monthly_family3": 429,
+      "snap_portal": "https://www.srsflexfund.com",
+      "medicaid_portal": "https://www.kdhe.ks.gov/medicaid",
+      "benefits_portal": "https://www.srsflexfund.com"
+    },
+    "KY": {
+      "name": "Kentucky",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 218,
+      "tanf_max_monthly_family3": 262,
+      "snap_portal": "https://kynect.ky.gov",
+      "medicaid_portal": "https://kynect.ky.gov",
+      "benefits_portal": "https://kynect.ky.gov"
+    },
+    "LA": {
+      "name": "Louisiana",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 250,
+      "tanf_max_monthly_family3": 240,
+      "snap_portal": "https://dcfs.louisiana.gov/snap",
+      "medicaid_portal": "https://ldh.la.gov/medicaid",
+      "benefits_portal": "https://dcfs.louisiana.gov"
+    },
+    "ME": {
+      "name": "Maine",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 485,
+      "snap_portal": "https://www.maine.gov/dhhs/ofi/programs-services/food-supplement",
+      "medicaid_portal": "https://www.maine.gov/dhhs/ofi/programs-services/mainecare",
+      "benefits_portal": "https://www.maine.gov/dhhs/ofi"
+    },
+    "MD": {
+      "name": "Maryland",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 317,
+      "tanf_max_monthly_family3": 727,
+      "snap_portal": "https://mydhrbenefits.dhr.state.md.us",
+      "medicaid_portal": "https://mmcp.health.maryland.gov",
+      "benefits_portal": "https://mydhrbenefits.dhr.state.md.us"
+    },
+    "MA": {
+      "name": "Massachusetts",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 300,
+      "tanf_max_monthly_family3": 767,
+      "snap_portal": "https://dtaconnect.eohhs.mass.gov",
+      "medicaid_portal": "https://www.mass.gov/masshealth",
+      "benefits_portal": "https://dtaconnect.eohhs.mass.gov"
+    },
+    "MI": {
+      "name": "Michigan",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 212,
+      "tanf_max_monthly_family3": 492,
+      "snap_portal": "https://newmibridges.michigan.gov",
+      "medicaid_portal": "https://newmibridges.michigan.gov",
+      "benefits_portal": "https://newmibridges.michigan.gov"
+    },
+    "MN": {
+      "name": "Minnesota",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 275,
+      "tanf_max_monthly_family3": 532,
+      "snap_portal": "https://mnbenefits.mn.gov",
+      "medicaid_portal": "https://mnbenefits.mn.gov",
+      "benefits_portal": "https://mnbenefits.mn.gov"
+    },
+    "MS": {
+      "name": "Mississippi",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 209,
+      "tanf_max_monthly_family3": 170,
+      "snap_portal": "https://www.mdhs.ms.gov/economic-assistance/snap",
+      "medicaid_portal": "https://medicaid.ms.gov",
+      "benefits_portal": "https://www.mdhs.ms.gov"
+    },
+    "MO": {
+      "name": "Missouri",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 300,
+      "tanf_max_monthly_family3": 292,
+      "snap_portal": "https://mydss.mo.gov",
+      "medicaid_portal": "https://mydss.mo.gov",
+      "benefits_portal": "https://mydss.mo.gov"
+    },
+    "MT": {
+      "name": "Montana",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 261,
+      "tanf_max_monthly_family3": 497,
+      "snap_portal": "https://benefits.mt.gov",
+      "medicaid_portal": "https://dphhs.mt.gov/medicaid",
+      "benefits_portal": "https://benefits.mt.gov"
+    },
+    "NE": {
+      "name": "Nebraska",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 364,
+      "snap_portal": "https://aceswebportal.ne.gov",
+      "medicaid_portal": "https://dhhs.ne.gov/medicaid",
+      "benefits_portal": "https://aceswebportal.ne.gov"
+    },
+    "NV": {
+      "name": "Nevada",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 386,
+      "snap_portal": "https://dwss.nv.gov",
+      "medicaid_portal": "https://dwss.nv.gov",
+      "benefits_portal": "https://dwss.nv.gov"
+    },
+    "NH": {
+      "name": "New Hampshire",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 318,
+      "tanf_max_monthly_family3": 675,
+      "snap_portal": "https://nheasy.nh.gov",
+      "medicaid_portal": "https://nheasy.nh.gov",
+      "benefits_portal": "https://nheasy.nh.gov"
+    },
+    "NJ": {
+      "name": "New Jersey",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 350,
+      "tanf_max_monthly_family3": 559,
+      "snap_portal": "https://www.mynjhelps.us",
+      "medicaid_portal": "https://www.mynjhelps.us",
+      "benefits_portal": "https://www.mynjhelps.us"
+    },
+    "NM": {
+      "name": "New Mexico",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 235,
+      "tanf_max_monthly_family3": 447,
+      "snap_portal": "https://yes.state.nm.us",
+      "medicaid_portal": "https://yes.state.nm.us",
+      "benefits_portal": "https://yes.state.nm.us"
+    },
+    "NY": {
+      "name": "New York",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 400,
+      "tanf_max_monthly_family3": 789,
+      "snap_portal": "https://mybenefits.ny.gov",
+      "medicaid_portal": "https://nystateofhealth.ny.gov",
+      "benefits_portal": "https://mybenefits.ny.gov"
+    },
+    "NC": {
+      "name": "North Carolina",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 210,
+      "tanf_max_monthly_family3": 272,
+      "snap_portal": "https://epass.nc.gov",
+      "medicaid_portal": "https://epass.nc.gov",
+      "benefits_portal": "https://epass.nc.gov"
+    },
+    "ND": {
+      "name": "North Dakota",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 175,
+      "tanf_max_monthly_family3": 477,
+      "snap_portal": "https://www.nd.gov/dhs/services/financialhelp/snap.html",
+      "medicaid_portal": "https://www.nd.gov/dhs/services/medicalserv",
+      "benefits_portal": "https://www.nd.gov/dhs"
+    },
+    "OH": {
+      "name": "Ohio",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 206,
+      "tanf_max_monthly_family3": 514,
+      "snap_portal": "https://benefits.ohio.gov",
+      "medicaid_portal": "https://benefits.ohio.gov",
+      "benefits_portal": "https://benefits.ohio.gov"
+    },
+    "OK": {
+      "name": "Oklahoma",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 235,
+      "tanf_max_monthly_family3": 292,
+      "snap_portal": "https://www.okdhslive.org",
+      "medicaid_portal": "https://oklahoma.gov/ohca",
+      "benefits_portal": "https://www.okdhslive.org"
+    },
+    "OR": {
+      "name": "Oregon",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 300,
+      "tanf_max_monthly_family3": 596,
+      "snap_portal": "https://www.oregonconnects.oregon.gov",
+      "medicaid_portal": "https://www.oregon.gov/oha/hsd/ohp",
+      "benefits_portal": "https://www.oregonconnects.oregon.gov"
+    },
+    "PA": {
+      "name": "Pennsylvania",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 314,
+      "tanf_max_monthly_family3": 422,
+      "snap_portal": "https://www.compass.state.pa.us",
+      "medicaid_portal": "https://www.compass.state.pa.us",
+      "benefits_portal": "https://www.compass.state.pa.us"
+    },
+    "RI": {
+      "name": "Rhode Island",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 261,
+      "tanf_max_monthly_family3": 721,
+      "snap_portal": "https://www.healthyrhode.ri.gov",
+      "medicaid_portal": "https://www.healthyrhode.ri.gov",
+      "benefits_portal": "https://www.healthyrhode.ri.gov"
+    },
+    "SC": {
+      "name": "South Carolina",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 208,
+      "tanf_max_monthly_family3": 287,
+      "snap_portal": "https://www.scdss.com/snap",
+      "medicaid_portal": "https://www.scdhhs.gov",
+      "benefits_portal": "https://www.scdss.com"
+    },
+    "SD": {
+      "name": "South Dakota",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 558,
+      "snap_portal": "https://dss.sd.gov/snap",
+      "medicaid_portal": "https://dss.sd.gov/medicaid",
+      "benefits_portal": "https://dss.sd.gov"
+    },
+    "TN": {
+      "name": "Tennessee",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 250,
+      "tanf_max_monthly_family3": 185,
+      "snap_portal": "https://www.tn.gov/humanservices/for-families/supplemental-nutrition-assistance-program.html",
+      "medicaid_portal": "https://www.tn.gov/tenncare",
+      "benefits_portal": "https://www.tn.gov/humanservices"
+    },
+    "TX": {
+      "name": "Texas",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 300,
+      "snap_portal": "https://www.yourtexasbenefits.com",
+      "medicaid_portal": "https://www.yourtexasbenefits.com",
+      "benefits_portal": "https://www.yourtexasbenefits.com"
+    },
+    "UT": {
+      "name": "Utah",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 498,
+      "snap_portal": "https://jobs.utah.gov/mycase",
+      "medicaid_portal": "https://medicaid.utah.gov",
+      "benefits_portal": "https://jobs.utah.gov/mycase"
+    },
+    "VT": {
+      "name": "Vermont",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 312,
+      "tanf_max_monthly_family3": 756,
+      "snap_portal": "https://dcf.vermont.gov/benefits/3SquaresVT",
+      "medicaid_portal": "https://dvha.vermont.gov",
+      "benefits_portal": "https://myvtbenefits.vermont.gov"
+    },
+    "VA": {
+      "name": "Virginia",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 389,
+      "snap_portal": "https://www.commonhelp.virginia.gov",
+      "medicaid_portal": "https://www.commonhelp.virginia.gov",
+      "benefits_portal": "https://www.commonhelp.virginia.gov"
+    },
+    "WA": {
+      "name": "Washington",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 312,
+      "tanf_max_monthly_family3": 658,
+      "snap_portal": "https://www.washingtonconnection.org",
+      "medicaid_portal": "https://www.washingtonconnection.org",
+      "benefits_portal": "https://www.washingtonconnection.org"
+    },
+    "WV": {
+      "name": "West Virginia",
+      "medicaid_expansion": true,
+      "chip_income_limit_pct_fpl": 300,
+      "tanf_max_monthly_family3": 340,
+      "snap_portal": "https://dhhr.wv.gov/bcf/Services/snap",
+      "medicaid_portal": "https://dhhr.wv.gov/bms",
+      "benefits_portal": "https://dhhr.wv.gov"
+    },
+    "WI": {
+      "name": "Wisconsin",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 306,
+      "tanf_max_monthly_family3": 653,
+      "snap_portal": "https://access.wisconsin.gov",
+      "medicaid_portal": "https://access.wisconsin.gov",
+      "benefits_portal": "https://access.wisconsin.gov"
+    },
+    "WY": {
+      "name": "Wyoming",
+      "medicaid_expansion": false,
+      "chip_income_limit_pct_fpl": 200,
+      "tanf_max_monthly_family3": 681,
+      "snap_portal": "https://dfs.wyo.gov/assistance-services/food-stamps-snap",
+      "medicaid_portal": "https://health.wyo.gov/healthcarefin/medicaid",
+      "benefits_portal": "https://dfs.wyo.gov"
+    }
+  }
+}

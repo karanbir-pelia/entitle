@@ -1,0 +1,103 @@
+{
+  "state": "NC",
+  "state_name": "North Carolina",
+  "medicaid_expansion": true,
+  "note": "North Carolina expanded Medicaid in December 2023. Adults up to 138% FPL now qualify for Medicaid.",
+  "programs": [
+    {
+      "id": "nc_snap",
+      "name": "SNAP (North Carolina)",
+      "full_name": "Supplemental Nutrition Assistance Program — North Carolina",
+      "agency": "DHHS",
+      "category": "food",
+      "description": "North Carolina administers federal SNAP (called Food and Nutrition Services in NC). Apply through NC ePASS.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_epass", "in_person", "phone"],
+        "where": "epass.nc.gov or local DSS office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "north_carolina"]
+    },
+    {
+      "id": "nc_medicaid",
+      "name": "NC Medicaid",
+      "full_name": "North Carolina Medicaid",
+      "agency": "DHHS",
+      "category": "healthcare",
+      "description": "NC expanded Medicaid in December 2023. Adults up to 138% FPL now qualify. Children covered up to 210% FPL. No premium for most enrollees.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 210,
+          "pregnant_limit_pct_of_fpl": 196,
+          "note": "NC expanded Medicaid December 2023 — adults up to 138% FPL qualify."
+        }
+      },
+      "application": {
+        "method": ["online_epass", "healthcare_gov", "in_person", "phone_1888_245_0179"],
+        "where": "epass.nc.gov or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of NC residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "north_carolina", "expanded"]
+    },
+    {
+      "id": "nc_tanf",
+      "name": "Work First (North Carolina TANF)",
+      "full_name": "Work First Family Assistance — North Carolina",
+      "agency": "DHHS",
+      "category": "cash",
+      "description": "NC's Work First program (TANF) provides short-term cash assistance to families with children. A family of 3 receives approximately $272/month.",
+      "monthly_benefit_range": {
+        "min_usd": 100,
+        "max_usd": 272,
+        "note": "Approximately $272/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Low income limits; work participation required after 30 days"
+        },
+        "time_limit": "24-month state limit within 48 months (NC stricter than federal)"
+      },
+      "application": {
+        "method": ["online_epass", "in_person"],
+        "where": "epass.nc.gov or local DSS office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "north_carolina"]
+    }
+  ]
+}

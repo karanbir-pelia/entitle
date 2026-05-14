@@ -1,0 +1,552 @@
+{
+  "programs": [
+    {
+      "id": "snap",
+      "name": "SNAP (Food Stamps)",
+      "full_name": "Supplemental Nutrition Assistance Program",
+      "agency": "USDA",
+      "category": "food",
+      "description": "Monthly grocery benefit loaded onto an EBT card",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "typical_family_4_usd": 975,
+        "note": "Amount depends on income, expenses, and household size"
+      },
+      "eligibility_rules": {
+        "citizenship": ["citizen", "qualified_noncitizen", "lawful_permanent_resident"],
+        "income": {
+          "type": "gross_monthly",
+          "limit_pct_of_fpl": 130,
+          "net_income_limit_pct_of_fpl": 100,
+          "note": "Federal Poverty Level 2026. Use household size to calculate limit."
+        },
+        "asset_limits": {
+          "general_usd": 2750,
+          "elderly_or_disabled_usd": 4250,
+          "note": "Vehicles, primary home, and retirement accounts generally excluded"
+        },
+        "household_requirements": "Must prepare and eat meals together",
+        "work_requirements": {
+          "applies_to": "able-bodied adults without dependents aged 18-54",
+          "hours_per_week": 20,
+          "exemptions": ["has dependent child under 6", "pregnant", "disabled", "over 54", "student"]
+        }
+      },
+      "application": {
+        "method": ["online", "in_person", "mail", "phone"],
+        "where": "State SNAP office or benefits.gov",
+        "processing_time_days": "30 (7 for expedited)",
+        "expedited_eligibility": "Households with less than $150/month gross income AND less than $100 in resources qualify for benefits within 7 days"
+      },
+      "required_documents": [
+        "Photo ID (driver's license, passport, or state ID)",
+        "Proof of address (utility bill, lease, or mail)",
+        "Proof of income for all household members (pay stubs, employer letter)",
+        "Social Security numbers for all household members applying",
+        "Proof of rent or mortgage if claiming shelter deduction",
+        "Proof of childcare expenses if applicable",
+        "Proof of medical expenses for elderly or disabled household members"
+      ],
+      "fpl_table_2026": {
+        "1": 15650,
+        "2": 21150,
+        "3": 26650,
+        "4": 32150,
+        "5": 37650,
+        "6": 43150,
+        "7": 48650,
+        "8": 54150,
+        "each_additional": 5500
+      },
+      "tags": ["food", "monthly", "ebt_card", "federal", "most_impactful"],
+      "languages_available": ["en", "es", "zh", "vi", "ko", "ru", "ar", "fr", "pt", "pl"]
+    },
+    {
+      "id": "medicaid",
+      "name": "Medicaid",
+      "full_name": "Medicaid Health Insurance",
+      "agency": "CMS",
+      "category": "healthcare",
+      "description": "Free or low-cost health insurance for low-income individuals and families",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium in most states for qualifying individuals. Value is the health coverage itself — typically worth $3,000-$8,000/year per person."
+      },
+      "eligibility_rules": {
+        "citizenship": ["citizen", "qualified_noncitizen", "daca_recipients_in_some_states"],
+        "income": {
+          "type": "modified_adjusted_gross_income",
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 200,
+          "note": "Income limits vary by state and population group. 138% FPL applies in expansion states."
+        },
+        "expansion_states": "39 states + DC have expanded Medicaid to adults up to 138% FPL. Non-expansion states have much stricter limits.",
+        "asset_limits": "No asset test for ACA Medicaid expansion population"
+      },
+      "application": {
+        "method": ["online_healthcare_gov", "state_marketplace", "in_person", "phone"],
+        "where": "healthcare.gov or state Medicaid office",
+        "processing_time_days": "45 (15 for children and pregnant women)",
+        "retroactive_coverage": "Can cover up to 3 months before application date"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income (last 30 days)",
+        "Social Security number",
+        "Immigration status documents if applicable",
+        "Proof of pregnancy if applicable"
+      ],
+      "tags": ["healthcare", "insurance", "federal", "most_impactful", "no_cost"]
+    },
+    {
+      "id": "chip",
+      "name": "CHIP",
+      "full_name": "Children's Health Insurance Program",
+      "agency": "CMS",
+      "category": "healthcare",
+      "description": "Low-cost or free health coverage for children in families that earn too much for Medicaid but cannot afford private insurance",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 50,
+        "note": "Premiums are typically $0-$50/month depending on income. Covers doctor visits, prescriptions, dental, vision."
+      },
+      "eligibility_rules": {
+        "age": "Under 19",
+        "income": {
+          "limit_pct_of_fpl": 200,
+          "note": "Many states extend to 300% or higher. Check state-specific file."
+        }
+      },
+      "application": {
+        "method": ["online_healthcare_gov", "state_chip_office", "in_person"],
+        "where": "healthcare.gov or state CHIP office",
+        "processing_time_days": 15
+      },
+      "required_documents": [
+        "Child's birth certificate",
+        "Proof of parent/guardian income",
+        "Social Security number for child",
+        "Proof of address"
+      ],
+      "tags": ["healthcare", "children", "low_cost", "federal"]
+    },
+    {
+      "id": "liheap",
+      "name": "LIHEAP",
+      "full_name": "Low Income Home Energy Assistance Program",
+      "agency": "HHS",
+      "category": "utilities",
+      "description": "Helps pay heating and cooling bills. Can also help with energy-related emergencies.",
+      "monthly_benefit_range": {
+        "min_usd": 200,
+        "max_usd": 2000,
+        "typical_usd": 500,
+        "note": "One-time seasonal payment, not monthly. Average benefit is $500/year."
+      },
+      "eligibility_rules": {
+        "income": {
+          "type": "gross",
+          "limit_pct_of_fpl": 150,
+          "note": "States can set limits as high as 60% of state median income"
+        },
+        "priority": "Households with elderly, disabled, or young children get priority"
+      },
+      "application": {
+        "method": ["in_person", "phone", "some_states_online"],
+        "where": "Local Community Action Agency — find at liheapch.acf.hhs.gov",
+        "note": "Funds run out quickly — apply early in the season (Oct-Nov for heating)"
+      },
+      "required_documents": [
+        "Photo ID for all adults",
+        "Proof of address",
+        "Most recent energy/utility bill",
+        "Proof of income (last 30 days)",
+        "Social Security numbers",
+        "Proof of home ownership or lease"
+      ],
+      "tags": ["utilities", "energy", "heating", "cooling", "seasonal", "federal"]
+    },
+    {
+      "id": "wic",
+      "name": "WIC",
+      "full_name": "Special Supplemental Nutrition Program for Women, Infants, and Children",
+      "agency": "USDA",
+      "category": "food",
+      "description": "Food, healthcare referrals, and nutrition education for pregnant women, new mothers, and children under 5",
+      "monthly_benefit_range": {
+        "min_usd": 30,
+        "max_usd": 60,
+        "note": "Benefit is a food package (formula, milk, eggs, cereal, juice, etc.), not cash. Approximate cash value is $30-$60/month per person."
+      },
+      "eligibility_rules": {
+        "who_qualifies": [
+          "pregnant",
+          "breastfeeding up to 1 year postpartum",
+          "non-breastfeeding up to 6 months postpartum",
+          "infants under 1 year",
+          "children under 5"
+        ],
+        "income": {
+          "limit_pct_of_fpl": 185
+        },
+        "categorical_eligibility": "Automatic if already on Medicaid or SNAP"
+      },
+      "application": {
+        "method": ["in_person", "some_states_virtual"],
+        "where": "Local WIC office — find at wic.fns.usda.gov/local-agencies",
+        "processing_time_days": "Same day determination usually"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income OR proof of participation in Medicaid/SNAP",
+        "Proof of pregnancy (if applicable)",
+        "Child's birth certificate (if applying for child)"
+      ],
+      "tags": ["food", "women", "infants", "children", "nutrition", "federal"]
+    },
+    {
+      "id": "ssi",
+      "name": "SSI",
+      "full_name": "Supplemental Security Income",
+      "agency": "SSA",
+      "category": "cash",
+      "description": "Monthly cash payments for people who are elderly (65+), blind, or disabled, with limited income and resources",
+      "monthly_benefit_range": {
+        "min_usd": 1,
+        "max_usd": 967,
+        "note": "2026 federal maximum $967/individual, $1,450/couple. Many states add a supplement."
+      },
+      "eligibility_rules": {
+        "who": ["aged 65 or older", "blind", "have a qualifying disability"],
+        "income": {
+          "note": "Complex calculation. Earned income is excluded up to $65/month + half of remainder. Many types of income are fully excluded."
+        },
+        "assets": {
+          "individual_limit_usd": 2000,
+          "couple_limit_usd": 3000,
+          "excluded": ["primary home", "one vehicle", "household goods", "life insurance under $1500 face value"]
+        },
+        "citizenship": "Must be US citizen OR qualified alien"
+      },
+      "application": {
+        "method": ["online_ssa_gov", "phone_1800_772_1213", "in_person_ssa_office"],
+        "where": "ssa.gov or local Social Security office",
+        "processing_time_days": "90-120 (often longer for disability)"
+      },
+      "required_documents": [
+        "Birth certificate or proof of age",
+        "Social Security card",
+        "Photo ID",
+        "Proof of citizenship or immigration status",
+        "Medical records if applying for disability",
+        "Proof of income and resources (bank statements, pay stubs)",
+        "Proof of address"
+      ],
+      "tags": ["cash", "elderly", "disabled", "blind", "monthly", "federal"]
+    },
+    {
+      "id": "tanf",
+      "name": "TANF",
+      "full_name": "Temporary Assistance for Needy Families",
+      "agency": "HHS",
+      "category": "cash",
+      "description": "Temporary cash assistance and services for low-income families with children",
+      "monthly_benefit_range": {
+        "min_usd": 100,
+        "max_usd": 900,
+        "note": "Highly variable by state. Some states provide very low benefits. Typically $300-500/month for a family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18 (or 19 if in school)",
+        "income": {
+          "note": "Varies dramatically by state. Generally must be below 50-85% FPL."
+        },
+        "citizenship": "Must be citizen or qualified immigrant. Children who are citizens may qualify even if parents are not.",
+        "time_limit": "Federal 60-month lifetime limit. States can set stricter limits.",
+        "work_requirements": "Most recipients must work, participate in job training, or perform community service"
+      },
+      "application": {
+        "method": ["in_person", "online_in_most_states"],
+        "where": "State welfare or human services office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers for all household members",
+        "Photo ID for adults",
+        "Proof of address",
+        "Proof of income",
+        "Proof of childcare costs if applicable"
+      ],
+      "tags": ["cash", "families", "children", "temporary", "federal", "state_varies"]
+    },
+    {
+      "id": "aca_subsidies",
+      "name": "ACA Health Insurance Subsidies",
+      "full_name": "Affordable Care Act Premium Tax Credits",
+      "agency": "IRS/CMS",
+      "category": "healthcare",
+      "description": "Tax credits that reduce monthly health insurance premiums for people who buy coverage through the marketplace",
+      "monthly_benefit_range": {
+        "min_usd": 50,
+        "max_usd": 1200,
+        "note": "Amount varies widely based on income, age, location, and plan chosen. Average subsidy is ~$500/month."
+      },
+      "eligibility_rules": {
+        "income": {
+          "min_pct_of_fpl": 100,
+          "max_pct_of_fpl": 400,
+          "note": "Enhanced subsidies available through at least 2025 make coverage free for incomes up to 150% FPL"
+        },
+        "not_eligible_if": ["eligible for Medicaid", "have affordable employer coverage", "enrolled in Medicare"]
+      },
+      "application": {
+        "method": ["online_healthcare_gov"],
+        "where": "healthcare.gov (or state marketplace)",
+        "open_enrollment": "November 1 - January 15 (special enrollment for life events)"
+      },
+      "required_documents": [
+        "Social Security number",
+        "Estimated annual income for coverage year",
+        "Employer coverage information if applicable"
+      ],
+      "tags": ["healthcare", "insurance", "subsidy", "tax_credit", "marketplace", "federal"]
+    },
+    {
+      "id": "lifeline",
+      "name": "Lifeline",
+      "full_name": "Lifeline Phone & Internet Discount Program",
+      "agency": "FCC",
+      "category": "utilities",
+      "description": "Up to $9.25/month discount on phone or internet service. $34.25/month for households on Tribal lands.",
+      "monthly_benefit_range": {
+        "min_usd": 9,
+        "max_usd": 34,
+        "note": "$9.25/month standard. $34.25/month for qualifying Tribal households."
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 135
+        },
+        "categorical_eligibility": "Automatic if on SNAP, Medicaid, SSI, Federal Public Housing Assistance, or Veterans Pension/Survivor's Benefit"
+      },
+      "application": {
+        "method": ["online_lifelinesupport_org", "through_participating_carrier"],
+        "where": "lifelinesupport.org or participating phone/internet provider"
+      },
+      "required_documents": [
+        "Proof of income OR proof of participation in qualifying program",
+        "Proof of identity and address"
+      ],
+      "tags": ["phone", "internet", "utilities", "monthly", "federal", "easy_to_apply"]
+    },
+    {
+      "id": "housing_choice_voucher",
+      "name": "Section 8 Housing Voucher",
+      "full_name": "Housing Choice Voucher Program",
+      "agency": "HUD",
+      "category": "housing",
+      "description": "Rental assistance that helps pay the difference between your income and fair market rent",
+      "monthly_benefit_range": {
+        "min_usd": 200,
+        "max_usd": 2500,
+        "note": "Generally covers the portion of rent above 30% of household income, up to the area's fair market rent."
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_area_median_income": 50,
+          "note": "75% of new vouchers must go to households below 30% AMI"
+        }
+      },
+      "application": {
+        "method": ["in_person", "online_where_available"],
+        "where": "Local Public Housing Authority (PHA)",
+        "wait_list": "WARNING: Most areas have waiting lists of 2-10 years. Apply to every open waiting list in your area."
+      },
+      "required_documents": [
+        "Birth certificates for all household members",
+        "Social Security numbers",
+        "Photo ID for all adults",
+        "Proof of income",
+        "Rental history"
+      ],
+      "tags": ["housing", "rent", "federal", "long_wait", "high_impact"]
+    },
+    {
+      "id": "eitc",
+      "name": "Earned Income Tax Credit (EITC)",
+      "full_name": "Earned Income Tax Credit",
+      "agency": "IRS",
+      "category": "cash",
+      "description": "Refundable tax credit for low-to-moderate income workers. Worth up to $8,046/year for families with 3+ children.",
+      "monthly_benefit_range": {
+        "min_usd": 54,
+        "max_usd": 671,
+        "note": "Annual credit divided by 12. Amount depends on income, filing status, and number of qualifying children. 2026 maximum: $8,046 (3+ children), $7,152 (2 children), $4,328 (1 child), $649 (no children)."
+      },
+      "eligibility_rules": {
+        "citizenship": ["citizen", "resident_alien"],
+        "income": {
+          "note": "Must have earned income. Investment income limit $11,600. Gross income limit (single/HH): ~$59,899 (3+ kids), ~$55,768 (2 kids), ~$49,084 (1 kid), ~$18,591 (no kids). Add ~$6,960 for married filing jointly."
+        },
+        "work_requirements": "Must have earned income from employment or self-employment",
+        "not_eligible_if": ["claimed as dependent on someone else's return", "investment income over $11,600"]
+      },
+      "application": {
+        "method": ["federal_tax_return", "free_vita_sites", "free_file_irs_gov"],
+        "where": "IRS Free File at irs.gov or a VITA (Volunteer Income Tax Assistance) site near you",
+        "processing_time_days": "21 (e-file with direct deposit)",
+        "note": "File a federal tax return even if income is too low to owe taxes — the credit is refundable"
+      },
+      "required_documents": [
+        "Social Security numbers for yourself, spouse, and all qualifying children",
+        "W-2 forms from all employers",
+        "1099 forms if self-employed",
+        "Birth certificates for qualifying children",
+        "Bank account information for direct deposit"
+      ],
+      "tags": ["cash", "annual", "federal", "refundable", "workers", "most_impactful"]
+    },
+    {
+      "id": "child_tax_credit",
+      "name": "Child Tax Credit (CTC)",
+      "full_name": "Child Tax Credit / Additional Child Tax Credit",
+      "agency": "IRS",
+      "category": "cash",
+      "description": "Up to $2,000 per qualifying child under 17. Up to $1,700 is refundable (Additional CTC) for families who owe little or no taxes.",
+      "monthly_benefit_range": {
+        "min_usd": 50,
+        "max_usd": 283,
+        "note": "Monthly equivalent of annual credit ($2,000 per child ÷ 12 ≈ $167/child). Refundable portion up to $1,700/child."
+      },
+      "eligibility_rules": {
+        "who": "Families with qualifying children under 17 at end of tax year",
+        "income": {
+          "note": "Full credit phases out above $200,000 (single) or $400,000 (married filing jointly). Refundable portion available at lower incomes."
+        },
+        "citizenship": ["citizen", "resident_alien"]
+      },
+      "application": {
+        "method": ["federal_tax_return", "free_vita_sites", "free_file_irs_gov"],
+        "where": "IRS Free File at irs.gov or a VITA site near you",
+        "processing_time_days": "21 (e-file with direct deposit)"
+      },
+      "required_documents": [
+        "Social Security numbers for each qualifying child",
+        "Child's birth certificate",
+        "Proof that child lived with you for more than half the year",
+        "W-2s and income documentation"
+      ],
+      "tags": ["cash", "annual", "federal", "children", "refundable"]
+    },
+    {
+      "id": "nslp",
+      "name": "Free / Reduced School Meals (NSLP)",
+      "full_name": "National School Lunch Program and School Breakfast Program",
+      "agency": "USDA",
+      "category": "food",
+      "description": "Free or reduced-price breakfast and lunch for school-age children at participating schools. Free at ≤130% FPL; reduced price at 130–185% FPL.",
+      "monthly_benefit_range": {
+        "min_usd": 40,
+        "max_usd": 160,
+        "note": "Free lunch (~$3.50/day) and breakfast (~$2.00/day) × ~180 school days per year ≈ $83/month per child. Reduced price meals cost $0.40 (lunch) and $0.30 (breakfast). Categorical eligibility if household receives SNAP, TANF, or FDPIR."
+      },
+      "eligibility_rules": {
+        "who": "Children enrolled in participating schools (K–12)",
+        "income": {
+          "limit_pct_of_fpl": 185,
+          "note": "Free meals at ≤130% FPL. Reduced-price meals at 130–185% FPL."
+        },
+        "categorical_eligibility": "Automatic free meals for children in households receiving SNAP, TANF, or FDPIR — no separate application required"
+      },
+      "application": {
+        "method": ["school_application_form"],
+        "where": "Child's school — submit the household income form at the start of each school year",
+        "processing_time_days": "Typically within a few days of application"
+      },
+      "required_documents": [
+        "Completed household income application (available from child's school)",
+        "Or: proof of SNAP, TANF, or FDPIR participation (for categorical eligibility)"
+      ],
+      "tags": ["food", "children", "school", "federal", "easy_to_apply"]
+    },
+    {
+      "id": "ccdf",
+      "name": "Child Care Subsidy (CCDF)",
+      "full_name": "Child Care and Development Fund",
+      "agency": "HHS",
+      "category": "childcare",
+      "description": "Subsidizes child care costs for low-income working families with children under 13. Covers most or all of the cost of licensed day care, after-school care, or family child care.",
+      "monthly_benefit_range": {
+        "min_usd": 200,
+        "max_usd": 1500,
+        "typical_usd": 600,
+        "note": "Varies widely by state, income, age of child, and type of care. Family pays a small sliding-scale copay; subsidy covers the rest."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 13 (or under 19 if disabled)",
+        "income": {
+          "note": "Typically ≤85% of state median income. Limits and copay amounts vary by state."
+        },
+        "work_requirements": "Parent or guardian must be working, in school, or in job training",
+        "priority": "Families with children in foster care, children with disabilities, and families with very low incomes often get priority"
+      },
+      "application": {
+        "method": ["state_child_care_agency", "online_in_most_states"],
+        "where": "State child care subsidy office — find at childcare.gov",
+        "processing_time_days": "Varies; many states have wait lists — apply as early as possible",
+        "note": "Wait lists are common. Apply even if you expect a wait."
+      },
+      "required_documents": [
+        "Proof of income for all working adults (pay stubs, employer letter)",
+        "Proof of employment, school enrollment, or job training",
+        "Child's birth certificate",
+        "Photo ID for parents/guardians",
+        "Child care provider name, address, and license number",
+        "Proof of address"
+      ],
+      "tags": ["childcare", "children", "working_families", "federal", "state_varies"]
+    },
+    {
+      "id": "medicare_savings",
+      "name": "Medicare Savings Programs",
+      "full_name": "Medicare Savings Programs (QMB, SLMB, QI, QDWI)",
+      "agency": "CMS",
+      "category": "healthcare",
+      "description": "Helps people with Medicare pay for premiums, deductibles, and copays. QMB (most generous) covers Part A and B premiums plus all cost-sharing. SLMB and QI cover the Part B premium (~$185/month).",
+      "monthly_benefit_range": {
+        "min_usd": 10,
+        "max_usd": 350,
+        "note": "QMB saves roughly $185/month (Part B premium) plus cost-sharing on Medicare services. SLMB and QI save the Part B premium. QMB also eliminates Medicare copays and deductibles."
+      },
+      "eligibility_rules": {
+        "who": ["enrolled in Medicare Part A", "aged 65+, or under 65 with qualifying disability"],
+        "income": {
+          "note": "QMB: individual ~$1,275/month (~100% FPL), couple ~$1,724/month. SLMB: individual ~$1,526/month (~120% FPL). QI: individual ~$1,715/month (~135% FPL). 2026 guidelines; states may use slightly higher limits."
+        },
+        "assets": {
+          "note": "Asset limits apply but are generous: $9,660 individual / $14,470 couple (2026). Many assets excluded."
+        },
+        "not_eligible_if": ["not enrolled in Medicare Part A"]
+      },
+      "application": {
+        "method": ["state_medicaid_office", "online_in_some_states", "phone"],
+        "where": "State Medicaid office (not Social Security). Medicare.gov has a tool to find your state office.",
+        "processing_time_days": 45,
+        "note": "Also ask about the Extra Help / Low Income Subsidy program for Medicare prescription drug costs — similar income limits"
+      },
+      "required_documents": [
+        "Medicare card (showing Part A enrollment)",
+        "Proof of income (Social Security award letter, pay stubs)",
+        "Bank statements and asset information",
+        "Proof of address",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "elderly", "disabled", "medicare", "federal", "monthly"]
+    }
+  ]
+}

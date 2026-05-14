@@ -1,0 +1,101 @@
+{
+  "state": "CA",
+  "state_name": "California",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "calfresh",
+      "name": "CalFresh",
+      "full_name": "California Food Assistance Program (CalFresh)",
+      "agency": "CDSS",
+      "category": "food",
+      "description": "California's SNAP program. Income limits are slightly higher than federal — up to 200% FPL for some households.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Same federal benefit amounts. California adds Disaster CalFresh in emergencies."
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 200,
+          "note": "California uses 200% FPL for gross income test under expanded eligibility"
+        }
+      },
+      "application": {
+        "method": ["online_getcalfresh_org", "in_person", "phone"],
+        "where": "GetCalFresh.org or local county social services office",
+        "processing_time_days": "30 (3 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "california"]
+    },
+    {
+      "id": "medi_cal",
+      "name": "Medi-Cal",
+      "full_name": "California Medicaid (Medi-Cal)",
+      "agency": "DHCS",
+      "category": "healthcare",
+      "description": "California's Medicaid program. Covers adults up to 138% FPL. Children and pregnant women up to 266% FPL.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No cost for most enrollees. Covers doctor visits, hospital, prescriptions, mental health, dental, and vision."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 266,
+          "pregnant_limit_pct_of_fpl": 213
+        },
+        "citizenship": "California covers DACA recipients and undocumented children/young adults through age 26"
+      },
+      "application": {
+        "method": ["online_coveredca_com", "in_person", "phone"],
+        "where": "CoveredCA.com or county social services",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of California residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": ["healthcare", "insurance", "state", "california", "no_cost"]
+    },
+    {
+      "id": "ca_eitc",
+      "name": "California EITC",
+      "full_name": "California Earned Income Tax Credit",
+      "agency": "FTB",
+      "category": "tax_credit",
+      "description": "State tax credit for low-income working Californians. Can be combined with federal EITC for up to $3,000+ in refunds.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 250,
+        "note": "Annual credit up to $3,000+ depending on income and family size. Paid as tax refund."
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 250,
+          "note": "Must have earned income. Self-employed workers qualify."
+        }
+      },
+      "application": {
+        "method": ["tax_return"],
+        "where": "File California state tax return (Form 3514)",
+        "processing_time_days": "21-45 after filing"
+      },
+      "required_documents": [
+        "W-2 forms or 1099s",
+        "Social Security numbers for all family members",
+        "Bank account for direct deposit"
+      ],
+      "tags": ["tax_credit", "cash", "annual", "state", "california"]
+    }
+  ]
+}

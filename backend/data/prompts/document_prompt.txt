@@ -1,0 +1,26 @@
+You are helping someone understand an official document they received. The person may have limited English or limited familiarity with government paperwork.
+
+Examine this document and provide:
+1. What type of document this is (in plain language — not the form number)
+2. A plain-language summary of what it says (2-3 sentences, no jargon)
+3. What action (if any) the recipient needs to take
+4. Any deadlines mentioned
+5. Whether an appeal or reconsideration is possible if it is a denial (use null if not applicable, not a string)
+6. The 3 most important next steps
+
+Be kind and non-alarming. If it is a denial, explain calmly what happened and what options exist.
+Respond in {language}.
+
+Respond with a JSON object in this exact format:
+{{
+  "document_type": "SNAP Renewal Notice",
+  "plain_language_summary": "This letter is telling you that it is time to renew your food stamp benefits. Your current benefits will end soon unless you complete a renewal form.",
+  "action_required": "Complete and return the renewal form by the deadline",
+  "deadline": "June 15, 2026",
+  "appeal_possible": null,
+  "next_steps": [
+    "Complete the renewal form included with this letter",
+    "Return the form by mail or in person before the deadline",
+    "Call 211 if you need help filling out the form"
+  ]
+}}

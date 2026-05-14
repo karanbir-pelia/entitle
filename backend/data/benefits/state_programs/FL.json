@@ -1,0 +1,71 @@
+{
+  "state": "FL",
+  "state_name": "Florida",
+  "medicaid_expansion": false,
+  "note": "Florida has NOT expanded Medicaid. Working adults without children generally do not qualify for Medicaid.",
+  "programs": [
+    {
+      "id": "fl_snap",
+      "name": "SNAP (Florida)",
+      "full_name": "Supplemental Nutrition Assistance Program — Florida",
+      "agency": "DCF",
+      "category": "food",
+      "description": "Florida administers federal SNAP. Apply online at AccessFlorida.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_myflorida_com", "in_person", "phone"],
+        "where": "MyAccessFlorida.com (ACCESS) or local DCF office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of Florida residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "florida"]
+    },
+    {
+      "id": "fl_medicaid",
+      "name": "Florida Medicaid",
+      "full_name": "Florida Medicaid",
+      "agency": "AHCA",
+      "category": "healthcare",
+      "description": "Florida Medicaid is restricted. Covers children, pregnant women, elderly, and people with disabilities. Adults without children generally do NOT qualify.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for qualifying individuals."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 196,
+          "adults_limit_pct_of_fpl": 26,
+          "note": "Florida has NOT expanded Medicaid. Very limited coverage for working adults without children."
+        }
+      },
+      "application": {
+        "method": ["online_myflorida_com", "in_person", "phone"],
+        "where": "MyAccessFlorida.com or local DCF office",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Florida residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "florida", "restricted"]
+    }
+  ]
+}

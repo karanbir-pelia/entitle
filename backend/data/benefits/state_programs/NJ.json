@@ -1,0 +1,103 @@
+{
+  "state": "NJ",
+  "state_name": "New Jersey",
+  "medicaid_expansion": true,
+  "note": "New Jersey expanded Medicaid. Adults up to 138% FPL qualify through NJ FamilyCare. CHIP covers children up to 350% FPL.",
+  "programs": [
+    {
+      "id": "nj_snap",
+      "name": "SNAP (New Jersey)",
+      "full_name": "Supplemental Nutrition Assistance Program — New Jersey",
+      "agency": "DHS",
+      "category": "food",
+      "description": "New Jersey administers federal SNAP. Apply through NJ OneApp (mynjhelps.us).",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_mynjhelps", "in_person", "phone_1800_687_9512"],
+        "where": "mynjhelps.us or local County Board of Social Services",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "new_jersey"]
+    },
+    {
+      "id": "nj_medicaid",
+      "name": "NJ FamilyCare (Medicaid)",
+      "full_name": "NJ FamilyCare — New Jersey Medicaid",
+      "agency": "DHS",
+      "category": "healthcare",
+      "description": "NJ FamilyCare covers adults up to 138% FPL and children up to 350% FPL. No premium for most adults; small premiums may apply for higher-income children.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees at or below 138% FPL."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 350,
+          "pregnant_limit_pct_of_fpl": 205,
+          "note": "NJ expanded Medicaid — adults up to 138% FPL qualify through NJ FamilyCare."
+        }
+      },
+      "application": {
+        "method": ["online_mynjhelps", "healthcare_gov", "in_person", "phone_1800_701_0710"],
+        "where": "mynjhelps.us or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of NJ residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "new_jersey", "expanded"]
+    },
+    {
+      "id": "nj_tanf",
+      "name": "WorkFirst NJ (TANF)",
+      "full_name": "WorkFirst New Jersey — Temporary Assistance for Needy Families",
+      "agency": "DHS",
+      "category": "cash",
+      "description": "NJ's WorkFirst program provides monthly cash to families with children. A family of 3 can receive approximately $559/month.",
+      "monthly_benefit_range": {
+        "min_usd": 250,
+        "max_usd": 559,
+        "note": "Approximately $559/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18 (or 19 if in school)",
+        "income": {
+          "note": "Must be below income limits; work participation required"
+        },
+        "time_limit": "60-month federal lifetime limit"
+      },
+      "application": {
+        "method": ["online_mynjhelps", "in_person"],
+        "where": "mynjhelps.us or local County Board of Social Services"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "new_jersey"]
+    }
+  ]
+}

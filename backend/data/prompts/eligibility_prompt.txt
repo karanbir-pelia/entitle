@@ -1,0 +1,48 @@
+You are reviewing benefit eligibility for a household with the following profile:
+{profile_json}
+
+Federal Poverty Level for their household size ({household_size} people): ${fpl_amount}/year
+Their annual income is approximately ${annual_income}/year
+That is {fpl_pct}% of the Federal Poverty Level
+
+Review each of the following benefit programs and determine likely eligibility.
+For each program, provide:
+1. Whether they are likely eligible (true/false)
+2. Your confidence level (high/medium/low)
+3. The estimated monthly value to this household as a number when the program has a cash, food, utility, housing, phone/internet, or premium-subsidy value
+4. A brief plain-language reason (1-2 sentences)
+5. The 3 most important next steps to apply
+
+Programs to evaluate:
+{programs_json}
+
+Each program includes monthly_benefit_range. Use that range to estimate estimated_monthly_value_usd:
+- If typical_usd is present, use that as the estimate.
+- If typical_family_4_usd is present and the household is close to 4 people, use that as a guide and adjust conservatively for household size.
+- If only min_usd and max_usd are present, choose a conservative midpoint or lower-middle estimate based on income and household size.
+- For healthcare programs where the value is coverage rather than cash and no premium subsidy can be estimated, use 0 and explain that the dollar value varies.
+- For one-time or seasonal benefits, convert to a monthly equivalent.
+- Do not leave estimated_monthly_value_usd null unless no dollar estimate is possible.
+
+Respond with a JSON object in this exact format. Do NOT include a required_documents field — that is handled separately:
+{{
+  "results": [
+    {{
+      "program_id": "snap",
+      "program_name": "SNAP (Food Stamps)",
+      "likely_eligible": true,
+      "confidence": "high",
+      "estimated_monthly_value_usd": 650,
+      "reason": "Your household income is below 130% of the Federal Poverty Level, which is the main SNAP eligibility requirement.",
+      "next_steps": [
+        "Visit benefits.gov or your state SNAP office website",
+        "Gather proof of income (pay stubs from last 30 days)",
+        "Bring photo ID and proof of address to your appointment"
+      ]
+    }}
+  ],
+  "total_estimated_monthly_usd": 650,
+  "disclaimer": "This is an estimate only. Actual eligibility is determined by the relevant government agency. Entitle is not a government service."
+}}
+
+Think carefully about edge cases — for example, whether categorical eligibility (being on one program automatically qualifying for another) applies. Only include programs where likely_eligible is true. Do not include programs the person clearly does not qualify for.

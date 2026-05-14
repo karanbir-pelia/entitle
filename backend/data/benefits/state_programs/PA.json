@@ -1,0 +1,104 @@
+{
+  "state": "PA",
+  "state_name": "Pennsylvania",
+  "medicaid_expansion": true,
+  "note": "Pennsylvania expanded Medicaid. Adults up to 138% FPL qualify for Medicaid (Healthy PA). PA also has CHIP up to 314% FPL.",
+  "programs": [
+    {
+      "id": "pa_snap",
+      "name": "SNAP (Pennsylvania)",
+      "full_name": "Supplemental Nutrition Assistance Program — Pennsylvania",
+      "agency": "DHS",
+      "category": "food",
+      "description": "Pennsylvania administers federal SNAP benefits. Apply online through COMPASS.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_compass", "in_person", "phone"],
+        "where": "compass.state.pa.us or local County Assistance Office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income (pay stubs, employer letter)",
+        "Social Security numbers for all household members"
+      ],
+      "tags": ["food", "ebt_card", "state", "pennsylvania"]
+    },
+    {
+      "id": "pa_medicaid",
+      "name": "Pennsylvania Medicaid (MA)",
+      "full_name": "Pennsylvania Medical Assistance",
+      "agency": "DHS",
+      "category": "healthcare",
+      "description": "Pennsylvania expanded Medicaid covers adults up to 138% FPL. Children covered up to 314% FPL through CHIP. No premium for most enrollees.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Full health coverage including dental and vision for children."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 215,
+          "note": "Pennsylvania expanded Medicaid — most adults up to 138% FPL qualify."
+        }
+      },
+      "application": {
+        "method": ["online_compass", "healthcare_gov", "in_person", "phone_1855_827_3748"],
+        "where": "compass.state.pa.us or County Assistance Office",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Pennsylvania residency",
+        "Social Security number",
+        "Immigration documents if applicable"
+      ],
+      "tags": ["healthcare", "insurance", "state", "pennsylvania", "expanded"]
+    },
+    {
+      "id": "pa_tanf",
+      "name": "TANF — Pennsylvania (LIAF/TANF)",
+      "full_name": "Temporary Assistance for Needy Families — Pennsylvania",
+      "agency": "DHS",
+      "category": "cash",
+      "description": "Pennsylvania's TANF program (called TANF Cash Assistance) provides monthly payments to families with children. Maximum for a family of 3 is approximately $422/month.",
+      "monthly_benefit_range": {
+        "min_usd": 205,
+        "max_usd": 422,
+        "note": "Family of 3 maximum is approximately $422/month."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18 (or 19 if in school)",
+        "income": {
+          "note": "Must be below income limits; work requirements apply for most adults"
+        },
+        "time_limit": "60-month federal lifetime limit"
+      },
+      "application": {
+        "method": ["online_compass", "in_person"],
+        "where": "compass.state.pa.us or local County Assistance Office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "pennsylvania"]
+    }
+  ]
+}

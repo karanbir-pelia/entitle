@@ -1,0 +1,32 @@
+Based on the following conversation, extract what you know about the user's household situation.
+
+Use the full conversation, including short follow-up answers. If the assistant asked "How many people are in your household?" and the user answered "3", set household_size to 3. If the assistant asked about monthly income and the user answered "$5000", set monthly_income_usd to 5000.
+
+Fill in only fields you are confident about from what the user said. Leave unknown fields out.
+
+Set profile_complete to true only when you have ALL of the following:
+- state (two-letter US state code)
+- household_size (total people including the user)
+- monthly_income_usd (total monthly gross income; do NOT confuse bills/expenses for income)
+- children (number of children under 18; set to 0 if the user says there are none or they live alone)
+- has_elderly AND has_disabled (both required; set from the conversation or from a direct "No" answer)
+
+Important extraction rules:
+- Return a two-letter uppercase US state code for state (e.g. TX, CA, NY).
+- If the user says "married" and mentions a spouse, count two adults unless they say otherwise.
+- If the user says "single mom with 2 kids", household_size=3, children=2.
+- If the user says "just me" or "I live alone", household_size=1, children=0.
+- If the user mentions children's ages, set has_children_under_5=true if any child is under 5.
+- If the user mentions pregnancy, set has_pregnant=true.
+- If the user mentions a baby or infant, set has_infant=true and has_children_under_5=true.
+- If the user mentions anyone 60+ or elderly, set has_elderly=true.
+- If the user mentions disability or disabled, set has_disabled=true.
+- If the user explicitly says "No" or "None" or "none of those" when asked about elderly, disability, or pregnancy, set has_elderly=false, has_disabled=false, and has_pregnant=false.
+- If the user says "no income", "zero income", "I have no income", "I don't work", "unemployed", or otherwise clearly indicates zero earnings, set monthly_income_usd to 0.
+- Rent, mortgage, car payment, loan payment, utilities, and childcare are NOT income.
+- Do not infer immigration status.
+
+Conversation:
+{conversation}
+
+Respond only with valid JSON matching the UserProfile schema. Do not include explanation, markdown, or code fences.

@@ -1,0 +1,120 @@
+# ─── Secrets & environment ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials.json
+service_account*.json
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+.Python
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+MANIFEST
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# ─── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.cache/
+.npm/
+.yarn/
+.pnp.*
+*.tsbuildinfo
+
+# ─── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+*.nbconvert/
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ─── IDEs & editors ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ─── Logs & temp ──────────────────────────────────────────────────────────────
+*.log
+logs/
+*.tmp
+*.temp
+tmp/
+temp/
+
+# ─── Testing & coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+test-results/
+junit*.xml
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+.docker/
+
+# ─── Ollama / model weights ───────────────────────────────────────────────────
+*.gguf
+*.ggml
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+models/
+
+# ─── Internal planning & AI agent docs ───────────────────────────────────────
+PLAN.md
+CLAUDE.md
+MEMORY.md
+memory/
+TODO.md
+NOTES.md
+SCRATCH.md
+
+# ─── Demo / media ─────────────────────────────────────────────────────────────
+demo/screenshots/
+*.mp4
+*.mov
+*.avi
+*.mkv

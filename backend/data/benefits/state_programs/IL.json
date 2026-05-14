@@ -1,0 +1,103 @@
+{
+  "state": "IL",
+  "state_name": "Illinois",
+  "medicaid_expansion": true,
+  "note": "Illinois expanded Medicaid. Adults up to 138% FPL qualify. Illinois also has AllKids CHIP up to 313% FPL and a robust state earned income credit.",
+  "programs": [
+    {
+      "id": "il_snap",
+      "name": "SNAP (Illinois)",
+      "full_name": "Supplemental Nutrition Assistance Program — Illinois",
+      "agency": "IDHS",
+      "category": "food",
+      "description": "Illinois administers federal SNAP. Apply through the ABE (Application for Benefits Eligibility) portal.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_abe", "in_person", "phone_1800_843_6154"],
+        "where": "abe.illinois.gov or local DHS office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "illinois"]
+    },
+    {
+      "id": "il_medicaid",
+      "name": "Illinois Medicaid",
+      "full_name": "Illinois Medical Assistance Program",
+      "agency": "HFS",
+      "category": "healthcare",
+      "description": "Illinois expanded Medicaid covers adults up to 138% FPL. Children covered through All Kids up to 313% FPL. No premium for most adults.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers medical, dental, vision."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 213,
+          "note": "Illinois expanded Medicaid — adults up to 138% FPL qualify."
+        }
+      },
+      "application": {
+        "method": ["online_abe", "healthcare_gov", "in_person", "phone"],
+        "where": "abe.illinois.gov or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Illinois residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "illinois", "expanded"]
+    },
+    {
+      "id": "il_tanf",
+      "name": "TANF (Illinois)",
+      "full_name": "Temporary Assistance for Needy Families — Illinois",
+      "agency": "IDHS",
+      "category": "cash",
+      "description": "Illinois TANF provides monthly cash to families with children. A family of 3 can receive up to approximately $432/month.",
+      "monthly_benefit_range": {
+        "min_usd": 200,
+        "max_usd": 432,
+        "note": "Maximum approximately $432/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Must be below income limits. Work requirements apply after 24 months."
+        },
+        "time_limit": "60-month federal lifetime limit"
+      },
+      "application": {
+        "method": ["online_abe", "in_person"],
+        "where": "abe.illinois.gov or local DHS office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "illinois"]
+    }
+  ]
+}

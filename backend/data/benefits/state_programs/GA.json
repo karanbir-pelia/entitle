@@ -1,0 +1,105 @@
+{
+  "state": "GA",
+  "state_name": "Georgia",
+  "medicaid_expansion": false,
+  "note": "Georgia has NOT fully expanded Medicaid. The Georgia Pathways program offers limited Medicaid to adults 19-64 at up to 100% FPL with work/community engagement requirements. Most working-age adults without children do not qualify for full Medicaid.",
+  "programs": [
+    {
+      "id": "ga_snap",
+      "name": "SNAP (Georgia)",
+      "full_name": "Supplemental Nutrition Assistance Program — Georgia",
+      "agency": "DFCS",
+      "category": "food",
+      "description": "Georgia administers federal SNAP. Apply through the Gateway portal.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_gateway", "in_person", "phone_1877_423_4746"],
+        "where": "gateway.ga.gov or local DFCS office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "georgia"]
+    },
+    {
+      "id": "ga_medicaid",
+      "name": "Georgia Medicaid / Pathways",
+      "full_name": "Georgia Medicaid and Pathways to Coverage",
+      "agency": "DCH",
+      "category": "healthcare",
+      "description": "Georgia Medicaid covers pregnant women (up to 220% FPL), children (up to 247% FPL), and people with disabilities/elderly. The Pathways program covers adults 19-64 at up to 100% FPL who meet work/community engagement requirements (80 hrs/month).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Georgia has NOT fully expanded Medicaid."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 100,
+          "children_limit_pct_of_fpl": 247,
+          "pregnant_limit_pct_of_fpl": 220,
+          "note": "Pathways: adults 19-64 up to 100% FPL with 80 hrs/month work or community engagement. Georgia has NOT fully expanded Medicaid."
+        },
+        "work_requirements": "Pathways program requires 80 hours/month of work, job training, education, or volunteering"
+      },
+      "application": {
+        "method": ["online_gateway", "in_person", "phone_1877_423_4746"],
+        "where": "gateway.ga.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Georgia residency",
+        "Social Security number",
+        "Proof of qualifying work/community engagement (for Pathways)"
+      ],
+      "tags": ["healthcare", "insurance", "state", "georgia", "restricted"]
+    },
+    {
+      "id": "ga_tanf",
+      "name": "TANF (Georgia)",
+      "full_name": "Temporary Assistance for Needy Families — Georgia",
+      "agency": "DFCS",
+      "category": "cash",
+      "description": "Georgia's TANF program provides modest cash to families with children. A family of 3 can receive up to approximately $280/month.",
+      "monthly_benefit_range": {
+        "min_usd": 100,
+        "max_usd": 280,
+        "note": "Maximum approximately $280/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Very low income limits; work requirements apply"
+        },
+        "time_limit": "48-month state lifetime limit (stricter than federal 60 months)"
+      },
+      "application": {
+        "method": ["online_gateway", "in_person"],
+        "where": "gateway.ga.gov or local DFCS office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "georgia"]
+    }
+  ]
+}

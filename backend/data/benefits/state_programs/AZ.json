@@ -1,0 +1,103 @@
+{
+  "state": "AZ",
+  "state_name": "Arizona",
+  "medicaid_expansion": true,
+  "note": "Arizona expanded Medicaid (AHCCCS). Adults up to 138% FPL qualify. Apply through HEAplus (now part of ONE DES portal).",
+  "programs": [
+    {
+      "id": "az_snap",
+      "name": "SNAP (Arizona)",
+      "full_name": "Supplemental Nutrition Assistance Program — Arizona",
+      "agency": "DES",
+      "category": "food",
+      "description": "Arizona administers federal SNAP (called Nutrition Assistance in AZ). Apply through the ONE DES portal.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_des", "in_person", "phone_1855_HEA_PLUS"],
+        "where": "des.az.gov or local DES office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "arizona"]
+    },
+    {
+      "id": "az_medicaid",
+      "name": "AHCCCS (Arizona Medicaid)",
+      "full_name": "Arizona Health Care Cost Containment System — Medicaid",
+      "agency": "AHCCCS",
+      "category": "healthcare",
+      "description": "Arizona's AHCCCS covers adults up to 138% FPL and children up to 200% FPL. No premium for most enrollees. One of the oldest managed Medicaid programs in the country.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Managed care model."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 156,
+          "note": "Arizona expanded Medicaid — adults up to 138% FPL qualify through AHCCCS."
+        }
+      },
+      "application": {
+        "method": ["online_healtheaz", "healthcare_gov", "in_person", "phone_1855_HEA_PLUS"],
+        "where": "healthearizonaplus.gov or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Arizona residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "arizona", "expanded"]
+    },
+    {
+      "id": "az_tanf",
+      "name": "TPEP (Arizona TANF)",
+      "full_name": "Temporary Poverty Exemption Program / Arizona TANF",
+      "agency": "DES",
+      "category": "cash",
+      "description": "Arizona's TANF program provides temporary cash assistance to families with children. A family of 3 receives approximately $278/month. Arizona has strict work requirements and time limits.",
+      "monthly_benefit_range": {
+        "min_usd": 100,
+        "max_usd": 278,
+        "note": "Approximately $278/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Must be below income limits; 24-hour work requirements apply"
+        },
+        "time_limit": "24-month state lifetime limit (Arizona is stricter than federal 60 months)"
+      },
+      "application": {
+        "method": ["online_des", "in_person"],
+        "where": "des.az.gov or local DES office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "arizona"]
+    }
+  ]
+}

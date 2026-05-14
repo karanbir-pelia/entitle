@@ -1,0 +1,103 @@
+{
+  "state": "MI",
+  "state_name": "Michigan",
+  "medicaid_expansion": true,
+  "note": "Michigan expanded Medicaid (Healthy Michigan Plan). Adults up to 138% FPL qualify. Apply through MI Bridges.",
+  "programs": [
+    {
+      "id": "mi_snap",
+      "name": "SNAP (Michigan)",
+      "full_name": "Supplemental Nutrition Assistance Program — Michigan",
+      "agency": "MDHHS",
+      "category": "food",
+      "description": "Michigan administers federal SNAP. Apply through the MI Bridges online portal.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_mi_bridges", "in_person", "phone_1855_275_6424"],
+        "where": "newmibridges.michigan.gov or local MDHHS office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "michigan"]
+    },
+    {
+      "id": "mi_medicaid",
+      "name": "Michigan Medicaid (Healthy Michigan Plan)",
+      "full_name": "Michigan Medicaid / Healthy Michigan Plan",
+      "agency": "MDHHS",
+      "category": "healthcare",
+      "description": "Michigan expanded Medicaid covers adults up to 138% FPL through the Healthy Michigan Plan. No premium for most enrollees. Covers medical, dental, vision.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Small cost-sharing may apply."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 212,
+          "pregnant_limit_pct_of_fpl": 212,
+          "note": "Michigan expanded Medicaid — adults up to 138% FPL qualify through Healthy Michigan Plan."
+        }
+      },
+      "application": {
+        "method": ["online_mi_bridges", "healthcare_gov", "in_person", "phone_1855_275_6424"],
+        "where": "newmibridges.michigan.gov or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Michigan residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "michigan", "expanded"]
+    },
+    {
+      "id": "mi_tanf",
+      "name": "Family Independence Program (Michigan TANF)",
+      "full_name": "Family Independence Program — Michigan",
+      "agency": "MDHHS",
+      "category": "cash",
+      "description": "Michigan's FIP (TANF) provides monthly cash assistance to families with children. Maximum for a family of 3 is approximately $492/month.",
+      "monthly_benefit_range": {
+        "min_usd": 200,
+        "max_usd": 492,
+        "note": "Maximum approximately $492/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Must be below income limits; employment plan required"
+        },
+        "time_limit": "48-month state lifetime limit"
+      },
+      "application": {
+        "method": ["online_mi_bridges", "in_person"],
+        "where": "newmibridges.michigan.gov or local MDHHS office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "michigan"]
+    }
+  ]
+}

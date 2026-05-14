@@ -1,0 +1,103 @@
+{
+  "state": "WA",
+  "state_name": "Washington",
+  "medicaid_expansion": true,
+  "note": "Washington expanded Medicaid (Apple Health). Adults up to 138% FPL qualify. Apply through Washington Connection.",
+  "programs": [
+    {
+      "id": "wa_snap",
+      "name": "SNAP (Washington)",
+      "full_name": "Supplemental Nutrition Assistance Program — Washington",
+      "agency": "DSHS",
+      "category": "food",
+      "description": "Washington administers federal SNAP (called Basic Food in WA). Apply through Washington Connection.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_wa_connection", "in_person", "phone_1877_501_2233"],
+        "where": "washingtonconnection.org or local DSHS Community Services Office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "washington"]
+    },
+    {
+      "id": "wa_medicaid",
+      "name": "Apple Health (Washington Medicaid)",
+      "full_name": "Apple Health — Washington State Medicaid",
+      "agency": "HCA",
+      "category": "healthcare",
+      "description": "Washington's Apple Health program covers adults up to 138% FPL and children up to 312% FPL. No premium for most enrollees. Comprehensive coverage including dental.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Washington has one of the most comprehensive Medicaid programs."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 312,
+          "pregnant_limit_pct_of_fpl": 193,
+          "note": "Washington expanded Medicaid — adults up to 138% FPL qualify through Apple Health."
+        }
+      },
+      "application": {
+        "method": ["online_wa_connection", "healthcare_gov", "in_person", "phone_1855_923_4633"],
+        "where": "washingtonconnection.org or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Washington residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "washington", "expanded"]
+    },
+    {
+      "id": "wa_tanf",
+      "name": "WorkFirst (Washington TANF)",
+      "full_name": "WorkFirst — Washington State TANF",
+      "agency": "DSHS",
+      "category": "cash",
+      "description": "Washington's WorkFirst program provides monthly cash to families with children. One of the more generous TANF programs — a family of 3 can receive up to approximately $658/month.",
+      "monthly_benefit_range": {
+        "min_usd": 300,
+        "max_usd": 658,
+        "note": "Approximately $658/month for family of 3 — among the higher TANF amounts in the US."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Must be below income limits; WorkFirst participation plan required"
+        },
+        "time_limit": "60-month federal lifetime limit"
+      },
+      "application": {
+        "method": ["online_wa_connection", "in_person"],
+        "where": "washingtonconnection.org or local DSHS Community Services Office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "washington"]
+    }
+  ]
+}

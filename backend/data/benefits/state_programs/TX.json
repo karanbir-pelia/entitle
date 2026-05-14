@@ -1,0 +1,103 @@
+{
+  "state": "TX",
+  "state_name": "Texas",
+  "medicaid_expansion": false,
+  "note": "Texas has NOT expanded Medicaid. Adults without children generally do not qualify for Medicaid in Texas unless disabled or elderly.",
+  "programs": [
+    {
+      "id": "tx_snap",
+      "name": "SNAP (Texas)",
+      "full_name": "Supplemental Nutrition Assistance Program — Texas",
+      "agency": "HHSC",
+      "category": "food",
+      "description": "Texas administers federal SNAP with standard federal eligibility rules. Apply online at YourTexasBenefits.com.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_yourtexasbenefits_com", "in_person", "phone"],
+        "where": "YourTexasBenefits.com or local HHSC benefits office",
+        "processing_time_days": "30 (3-7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "texas"]
+    },
+    {
+      "id": "tx_medicaid",
+      "name": "Texas Medicaid",
+      "full_name": "Texas Medicaid",
+      "agency": "HHSC",
+      "category": "healthcare",
+      "description": "Texas Medicaid is very restricted for adults. It covers: pregnant women (up to 198% FPL), children (up to 200% FPL), and adults with disabilities/elderly. Working adults without children generally do NOT qualify.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for qualifying individuals."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 18,
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 198,
+          "note": "Texas has NOT expanded Medicaid. Very few working-age adults without disabilities qualify."
+        }
+      },
+      "application": {
+        "method": ["online_yourtexasbenefits_com", "in_person", "phone"],
+        "where": "YourTexasBenefits.com",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Texas residency",
+        "Social Security number",
+        "Proof of pregnancy or disability if applicable"
+      ],
+      "tags": ["healthcare", "insurance", "state", "texas", "restricted"]
+    },
+    {
+      "id": "tx_tanf",
+      "name": "Texas Works (TANF)",
+      "full_name": "Texas Works — Temporary Assistance for Needy Families",
+      "agency": "HHSC",
+      "category": "cash",
+      "description": "Texas's TANF program provides modest cash assistance to families with children. Benefits are among the lowest in the nation.",
+      "monthly_benefit_range": {
+        "min_usd": 74,
+        "max_usd": 310,
+        "note": "Family of 3 receives approximately $256/month — one of the lowest TANF amounts in the US."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Very low income limits — generally below 12% FPL for initial eligibility"
+        }
+      },
+      "application": {
+        "method": ["online_yourtexasbenefits_com", "in_person"],
+        "where": "YourTexasBenefits.com or local HHSC office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "texas"]
+    }
+  ]
+}

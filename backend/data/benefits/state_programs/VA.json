@@ -1,0 +1,103 @@
+{
+  "state": "VA",
+  "state_name": "Virginia",
+  "medicaid_expansion": true,
+  "note": "Virginia expanded Medicaid in January 2019. Adults up to 138% FPL qualify. Apply through CommonHelp.",
+  "programs": [
+    {
+      "id": "va_snap",
+      "name": "SNAP (Virginia)",
+      "full_name": "Supplemental Nutrition Assistance Program — Virginia",
+      "agency": "DSS",
+      "category": "food",
+      "description": "Virginia administers federal SNAP. Apply through the CommonHelp portal.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_commonhelp", "in_person", "phone_1855_635_4370"],
+        "where": "commonhelp.virginia.gov or local DSS office",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of address",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "virginia"]
+    },
+    {
+      "id": "va_medicaid",
+      "name": "Virginia Medicaid",
+      "full_name": "Virginia Medicaid",
+      "agency": "DMAS",
+      "category": "healthcare",
+      "description": "Virginia expanded Medicaid covers adults up to 138% FPL. Children covered up to 200% FPL. No premium for most enrollees.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 200,
+          "pregnant_limit_pct_of_fpl": 205,
+          "note": "Virginia expanded Medicaid in 2019 — adults up to 138% FPL qualify."
+        }
+      },
+      "application": {
+        "method": ["online_commonhelp", "healthcare_gov", "in_person", "phone_1855_635_4370"],
+        "where": "commonhelp.virginia.gov or healthcare.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Virginia residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "virginia", "expanded"]
+    },
+    {
+      "id": "va_tanf",
+      "name": "VIEW (Virginia TANF)",
+      "full_name": "Virginia Initiative for Employment Not Welfare — TANF",
+      "agency": "DSS",
+      "category": "cash",
+      "description": "Virginia's VIEW program (TANF) provides monthly cash to families with children. Maximum for a family of 3 is approximately $389/month.",
+      "monthly_benefit_range": {
+        "min_usd": 150,
+        "max_usd": 389,
+        "note": "Approximately $389/month for family of 3."
+      },
+      "eligibility_rules": {
+        "who": "Families with children under 18",
+        "income": {
+          "note": "Must be below income limits; VIEW work program participation required"
+        },
+        "time_limit": "60-month federal lifetime limit; Virginia limits combined with other states' months"
+      },
+      "application": {
+        "method": ["online_commonhelp", "in_person"],
+        "where": "commonhelp.virginia.gov or local DSS office"
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of address"
+      ],
+      "tags": ["cash", "families", "children", "state", "virginia"]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --surface: #fbfaf7;
+  --panel: #ffffff;
+  --ink: #17201b;
+  --muted: #62706a;
+  --line: #dfe6df;
+  --green: #2d6a4f;
+  --green-dark: #1f4f3a;
+  --mint: #dcefe5;
+  --gold: #f7c85f;
+  --coral: #df6b57;
+  --blue: #376b9b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(55, 107, 155, 0.3);
+  outline-offset: 2px;
+}
+
+/* App shell: full-height column */
+.app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Content area: takes remaining height, row on desktop */
+.content-area {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* On mobile, left/right panes stack — each shown/hidden by mobileShowChat */
+/* On desktop, both panes are visible side by side */
+.content-area > * {
+  min-width: 0;
+}

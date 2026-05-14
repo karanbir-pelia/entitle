@@ -1,0 +1,70 @@
+{
+  "state": "NY",
+  "state_name": "New York",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "ny_snap",
+      "name": "SNAP (New York)",
+      "full_name": "Supplemental Nutrition Assistance Program — New York",
+      "agency": "OTDA",
+      "category": "food",
+      "description": "New York administers federal SNAP. Apply online at myBenefits.ny.gov.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130
+        }
+      },
+      "application": {
+        "method": ["online_mybenefits_ny_gov", "in_person", "phone"],
+        "where": "myBenefits.ny.gov or local Department of Social Services",
+        "processing_time_days": "30 (5 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of New York residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": ["food", "ebt_card", "state", "new_york"]
+    },
+    {
+      "id": "ny_medicaid",
+      "name": "New York Medicaid",
+      "full_name": "New York Medicaid",
+      "agency": "DOH",
+      "category": "healthcare",
+      "description": "New York has among the most generous Medicaid programs in the US. Adults covered up to 138% FPL. Essential Plan available up to 200% FPL.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 20,
+        "note": "No premium for most. Essential Plan has $0-$20/month premium for 139-200% FPL."
+      },
+      "eligibility_rules": {
+        "income": {
+          "adults_limit_pct_of_fpl": 138,
+          "children_limit_pct_of_fpl": 400,
+          "pregnant_limit_pct_of_fpl": 223,
+          "note": "New York also has the Essential Plan (139-200% FPL) and Child Health Plus (CHIP) up to 400% FPL"
+        }
+      },
+      "application": {
+        "method": ["online_nystateofhealth_ny_gov", "in_person", "phone"],
+        "where": "nystateofhealth.ny.gov or local Department of Social Services",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of New York residency",
+        "Social Security number"
+      ],
+      "tags": ["healthcare", "insurance", "state", "new_york", "no_cost"]
+    }
+  ]
+}
