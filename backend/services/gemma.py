@@ -67,6 +67,10 @@ async def call_ollama(
         "model": settings.ollama_model,
         "messages": messages,
         "stream": False,
+        # Disable Gemma 4's hidden thinking tokens. Without this, gemma4:e4b
+        # frequently consumes the entire num_predict budget on internal reasoning
+        # and emits zero visible characters (done_reason=length, length=0).
+        "think": False,
         "options": {
             "temperature": temperature,
             "num_predict": max_tokens,
@@ -276,6 +280,7 @@ async def generate_with_image(
                 }
             ],
             "stream": False,
+            "think": False,
         }
         if system_prompt:
             payload["system"] = system_prompt

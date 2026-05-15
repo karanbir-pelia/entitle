@@ -94,6 +94,9 @@ junit*.xml
 .docker/
 
 # ─── Ollama / model weights ───────────────────────────────────────────────────
+# NOTE: do NOT ignore "models/" here — that path is also the backend Python
+# package (backend/models/) holding Pydantic schemas. The extensions below
+# cover actual weight files wherever they live.
 *.gguf
 *.ggml
 *.bin
@@ -101,7 +104,6 @@ junit*.xml
 *.pt
 *.pth
 *.ckpt
-models/
 
 # ─── Internal planning & AI agent docs ───────────────────────────────────────
 PLAN.md
