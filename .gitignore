@@ -108,6 +108,7 @@ junit*.xml
 # ─── Internal planning & AI agent docs ───────────────────────────────────────
 PLAN.md
 CLAUDE.md
+CLAUDE*.md
 MEMORY.md
 memory/
 TODO.md
