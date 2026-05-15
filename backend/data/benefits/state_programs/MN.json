@@ -1,0 +1,134 @@
+{
+  "state": "MN",
+  "state_name": "Minnesota",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "mn_snap",
+      "name": "SNAP (Minnesota)",
+      "full_name": "Supplemental Nutrition Assistance Program — Minnesota",
+      "agency": "Minnesota DHS",
+      "category": "food",
+      "description": "Minnesota administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://mnbenefits.mn.gov",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "minnesota"
+      ]
+    },
+    {
+      "id": "mn_medicaid",
+      "name": "Medical Assistance (MA)",
+      "full_name": "Medical Assistance (MA) (Medicaid)",
+      "agency": "DHS",
+      "category": "healthcare",
+      "description": "Minnesota has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 275% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 275,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://mnbenefits.mn.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Minnesota residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "minnesota",
+        "expansion"
+      ]
+    },
+    {
+      "id": "mn_tanf",
+      "name": "Minnesota Family Investment Program (MFIP)",
+      "full_name": "Minnesota Family Investment Program (MFIP) — Temporary Assistance for Needy Families",
+      "agency": "Minnesota DHS",
+      "category": "cash",
+      "description": "Minnesota's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $532.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 532,
+        "note": "Family of 3 maximum: $532/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://mnbenefits.mn.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "minnesota"
+      ]
+    }
+  ]
+}

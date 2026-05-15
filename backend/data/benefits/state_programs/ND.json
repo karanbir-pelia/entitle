@@ -1,0 +1,134 @@
+{
+  "state": "ND",
+  "state_name": "North Dakota",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "nd_snap",
+      "name": "SNAP (North Dakota)",
+      "full_name": "Supplemental Nutrition Assistance Program — North Dakota",
+      "agency": "ND DHS",
+      "category": "food",
+      "description": "North Dakota administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.nd.gov/dhs/services/financialhelp/snap.html",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "north_dakota"
+      ]
+    },
+    {
+      "id": "nd_medicaid",
+      "name": "ND Medicaid",
+      "full_name": "ND Medicaid (Medicaid)",
+      "agency": "DHS",
+      "category": "healthcare",
+      "description": "North Dakota has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 175% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 175,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.nd.gov/dhs/services/medicalserv",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of North Dakota residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "north_dakota",
+        "expansion"
+      ]
+    },
+    {
+      "id": "nd_tanf",
+      "name": "TANF (ND)",
+      "full_name": "TANF (ND) — Temporary Assistance for Needy Families",
+      "agency": "ND DHS",
+      "category": "cash",
+      "description": "North Dakota's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $477.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 477,
+        "note": "Family of 3 maximum: $477/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://www.nd.gov/dhs",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "north_dakota"
+      ]
+    }
+  ]
+}

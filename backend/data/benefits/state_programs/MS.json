@@ -1,0 +1,135 @@
+{
+  "state": "MS",
+  "state_name": "Mississippi",
+  "medicaid_expansion": false,
+  "note": "Mississippi has NOT expanded Medicaid. Working-age adults without dependent children generally do not qualify for Medicaid unless they have a disability.",
+  "programs": [
+    {
+      "id": "ms_snap",
+      "name": "SNAP (Mississippi)",
+      "full_name": "Supplemental Nutrition Assistance Program — Mississippi",
+      "agency": "Mississippi DHS",
+      "category": "food",
+      "description": "Mississippi administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.mdhs.ms.gov/economic-assistance/snap",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "mississippi"
+      ]
+    },
+    {
+      "id": "ms_medicaid",
+      "name": "Mississippi Medicaid",
+      "full_name": "Mississippi Medicaid (Medicaid)",
+      "agency": "DOM",
+      "category": "healthcare",
+      "description": "Mississippi has NOT expanded Medicaid. Coverage for non-disabled adults without children is very limited. Children, pregnant women, the elderly, and people with disabilities may qualify (CHIP up to 209% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 209,
+          "adults_note": "No Medicaid expansion; eligibility for adults is very narrow"
+        },
+        "medicaid_expansion": false
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://medicaid.ms.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Mississippi residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "mississippi",
+        "non_expansion"
+      ]
+    },
+    {
+      "id": "ms_tanf",
+      "name": "TANF (Mississippi)",
+      "full_name": "TANF (Mississippi) — Temporary Assistance for Needy Families",
+      "agency": "Mississippi DHS",
+      "category": "cash",
+      "description": "Mississippi's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $170.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 170,
+        "note": "Family of 3 maximum: $170/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://www.mdhs.ms.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "mississippi"
+      ]
+    }
+  ]
+}

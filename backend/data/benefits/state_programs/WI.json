@@ -1,0 +1,135 @@
+{
+  "state": "WI",
+  "state_name": "Wisconsin",
+  "medicaid_expansion": false,
+  "note": "Wisconsin has NOT expanded Medicaid. Working-age adults without dependent children generally do not qualify for Medicaid unless they have a disability.",
+  "programs": [
+    {
+      "id": "wi_snap",
+      "name": "SNAP (Wisconsin)",
+      "full_name": "Supplemental Nutrition Assistance Program — Wisconsin",
+      "agency": "Wisconsin DHS",
+      "category": "food",
+      "description": "Wisconsin administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://access.wisconsin.gov",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "wisconsin"
+      ]
+    },
+    {
+      "id": "wi_medicaid",
+      "name": "BadgerCare Plus",
+      "full_name": "BadgerCare Plus (Medicaid)",
+      "agency": "DHS",
+      "category": "healthcare",
+      "description": "Wisconsin has NOT expanded Medicaid. Coverage for non-disabled adults without children is very limited. Children, pregnant women, the elderly, and people with disabilities may qualify (CHIP up to 306% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 306,
+          "adults_note": "No Medicaid expansion; eligibility for adults is very narrow"
+        },
+        "medicaid_expansion": false
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://access.wisconsin.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Wisconsin residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "wisconsin",
+        "non_expansion"
+      ]
+    },
+    {
+      "id": "wi_tanf",
+      "name": "Wisconsin Works (W-2)",
+      "full_name": "Wisconsin Works (W-2) — Temporary Assistance for Needy Families",
+      "agency": "Wisconsin DHS",
+      "category": "cash",
+      "description": "Wisconsin's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $653.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 653,
+        "note": "Family of 3 maximum: $653/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://access.wisconsin.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "wisconsin"
+      ]
+    }
+  ]
+}

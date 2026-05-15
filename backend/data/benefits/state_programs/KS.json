@@ -1,0 +1,135 @@
+{
+  "state": "KS",
+  "state_name": "Kansas",
+  "medicaid_expansion": false,
+  "note": "Kansas has NOT expanded Medicaid. Working-age adults without dependent children generally do not qualify for Medicaid unless they have a disability.",
+  "programs": [
+    {
+      "id": "ks_snap",
+      "name": "SNAP (Kansas)",
+      "full_name": "Supplemental Nutrition Assistance Program — Kansas",
+      "agency": "Kansas DCF",
+      "category": "food",
+      "description": "Kansas administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.srsflexfund.com",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "kansas"
+      ]
+    },
+    {
+      "id": "ks_medicaid",
+      "name": "KanCare",
+      "full_name": "KanCare (Medicaid)",
+      "agency": "KDHE",
+      "category": "healthcare",
+      "description": "Kansas has NOT expanded Medicaid. Coverage for non-disabled adults without children is very limited. Children, pregnant women, the elderly, and people with disabilities may qualify (CHIP up to 238% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 238,
+          "adults_note": "No Medicaid expansion; eligibility for adults is very narrow"
+        },
+        "medicaid_expansion": false
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.kdhe.ks.gov/medicaid",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Kansas residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "kansas",
+        "non_expansion"
+      ]
+    },
+    {
+      "id": "ks_tanf",
+      "name": "TANF Cash Assistance",
+      "full_name": "TANF Cash Assistance — Temporary Assistance for Needy Families",
+      "agency": "Kansas DCF",
+      "category": "cash",
+      "description": "Kansas's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $429.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 429,
+        "note": "Family of 3 maximum: $429/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://www.srsflexfund.com",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "kansas"
+      ]
+    }
+  ]
+}

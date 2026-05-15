@@ -1,0 +1,134 @@
+{
+  "state": "NE",
+  "state_name": "Nebraska",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "ne_snap",
+      "name": "SNAP (Nebraska)",
+      "full_name": "Supplemental Nutrition Assistance Program — Nebraska",
+      "agency": "Nebraska DHHS",
+      "category": "food",
+      "description": "Nebraska administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://aceswebportal.ne.gov",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "nebraska"
+      ]
+    },
+    {
+      "id": "ne_medicaid",
+      "name": "Heritage Health",
+      "full_name": "Heritage Health (Medicaid)",
+      "agency": "DHHS",
+      "category": "healthcare",
+      "description": "Nebraska has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 200% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 200,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://dhhs.ne.gov/medicaid",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Nebraska residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "nebraska",
+        "expansion"
+      ]
+    },
+    {
+      "id": "ne_tanf",
+      "name": "Aid to Dependent Children (ADC)",
+      "full_name": "Aid to Dependent Children (ADC) — Temporary Assistance for Needy Families",
+      "agency": "Nebraska DHHS",
+      "category": "cash",
+      "description": "Nebraska's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $364.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 364,
+        "note": "Family of 3 maximum: $364/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://aceswebportal.ne.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "nebraska"
+      ]
+    }
+  ]
+}

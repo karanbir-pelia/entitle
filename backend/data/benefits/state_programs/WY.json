@@ -1,0 +1,135 @@
+{
+  "state": "WY",
+  "state_name": "Wyoming",
+  "medicaid_expansion": false,
+  "note": "Wyoming has NOT expanded Medicaid. Working-age adults without dependent children generally do not qualify for Medicaid unless they have a disability.",
+  "programs": [
+    {
+      "id": "wy_snap",
+      "name": "SNAP (Wyoming)",
+      "full_name": "Supplemental Nutrition Assistance Program — Wyoming",
+      "agency": "WY DFS",
+      "category": "food",
+      "description": "Wyoming administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://dfs.wyo.gov/assistance-services/food-stamps-snap",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "wyoming"
+      ]
+    },
+    {
+      "id": "wy_medicaid",
+      "name": "Wyoming Medicaid",
+      "full_name": "Wyoming Medicaid (Medicaid)",
+      "agency": "WDH",
+      "category": "healthcare",
+      "description": "Wyoming has NOT expanded Medicaid. Coverage for non-disabled adults without children is very limited. Children, pregnant women, the elderly, and people with disabilities may qualify (CHIP up to 200% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 200,
+          "adults_note": "No Medicaid expansion; eligibility for adults is very narrow"
+        },
+        "medicaid_expansion": false
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://health.wyo.gov/healthcarefin/medicaid",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Wyoming residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "wyoming",
+        "non_expansion"
+      ]
+    },
+    {
+      "id": "wy_tanf",
+      "name": "POWER",
+      "full_name": "POWER — Temporary Assistance for Needy Families",
+      "agency": "WY DFS",
+      "category": "cash",
+      "description": "Wyoming's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $681.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 681,
+        "note": "Family of 3 maximum: $681/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://dfs.wyo.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "wyoming"
+      ]
+    }
+  ]
+}

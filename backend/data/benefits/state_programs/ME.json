@@ -1,0 +1,134 @@
+{
+  "state": "ME",
+  "state_name": "Maine",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "me_snap",
+      "name": "SNAP (Maine)",
+      "full_name": "Supplemental Nutrition Assistance Program — Maine",
+      "agency": "Maine DHHS / OFI",
+      "category": "food",
+      "description": "Maine administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.maine.gov/dhhs/ofi/programs-services/food-supplement",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "maine"
+      ]
+    },
+    {
+      "id": "me_medicaid",
+      "name": "MaineCare",
+      "full_name": "MaineCare (Medicaid)",
+      "agency": "DHHS / OMS",
+      "category": "healthcare",
+      "description": "Maine has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 200% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 200,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.maine.gov/dhhs/ofi/programs-services/mainecare",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Maine residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "maine",
+        "expansion"
+      ]
+    },
+    {
+      "id": "me_tanf",
+      "name": "TANF (Maine)",
+      "full_name": "TANF (Maine) — Temporary Assistance for Needy Families",
+      "agency": "Maine DHHS / OFI",
+      "category": "cash",
+      "description": "Maine's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $485.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 485,
+        "note": "Family of 3 maximum: $485/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://www.maine.gov/dhhs/ofi",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "maine"
+      ]
+    }
+  ]
+}

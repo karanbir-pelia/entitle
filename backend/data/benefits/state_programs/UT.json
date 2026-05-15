@@ -1,0 +1,134 @@
+{
+  "state": "UT",
+  "state_name": "Utah",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "ut_snap",
+      "name": "SNAP (Utah)",
+      "full_name": "Supplemental Nutrition Assistance Program — Utah",
+      "agency": "Utah DWS",
+      "category": "food",
+      "description": "Utah administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://jobs.utah.gov/mycase",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "utah"
+      ]
+    },
+    {
+      "id": "ut_medicaid",
+      "name": "Utah Medicaid",
+      "full_name": "Utah Medicaid (Medicaid)",
+      "agency": "DHHS",
+      "category": "healthcare",
+      "description": "Utah has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 200% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 200,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://medicaid.utah.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Utah residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "utah",
+        "expansion"
+      ]
+    },
+    {
+      "id": "ut_tanf",
+      "name": "Family Employment Program (FEP)",
+      "full_name": "Family Employment Program (FEP) — Temporary Assistance for Needy Families",
+      "agency": "Utah DWS",
+      "category": "cash",
+      "description": "Utah's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $498.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 498,
+        "note": "Family of 3 maximum: $498/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://jobs.utah.gov/mycase",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "utah"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "state": "MO",
+  "state_name": "Missouri",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "mo_snap",
+      "name": "SNAP (Missouri)",
+      "full_name": "Supplemental Nutrition Assistance Program — Missouri",
+      "agency": "Missouri DSS / FSD",
+      "category": "food",
+      "description": "Missouri administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://mydss.mo.gov",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "missouri"
+      ]
+    },
+    {
+      "id": "mo_medicaid",
+      "name": "MO HealthNet",
+      "full_name": "MO HealthNet (Medicaid)",
+      "agency": "DSS / MHD",
+      "category": "healthcare",
+      "description": "Missouri has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 300% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 300,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://mydss.mo.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Missouri residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "missouri",
+        "expansion"
+      ]
+    },
+    {
+      "id": "mo_tanf",
+      "name": "Temporary Assistance (TA)",
+      "full_name": "Temporary Assistance (TA) — Temporary Assistance for Needy Families",
+      "agency": "Missouri DSS / FSD",
+      "category": "cash",
+      "description": "Missouri's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $292.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 292,
+        "note": "Family of 3 maximum: $292/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://mydss.mo.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "missouri"
+      ]
+    }
+  ]
+}

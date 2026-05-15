@@ -1,0 +1,134 @@
+{
+  "state": "RI",
+  "state_name": "Rhode Island",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "ri_snap",
+      "name": "SNAP (Rhode Island)",
+      "full_name": "Supplemental Nutrition Assistance Program — Rhode Island",
+      "agency": "RI DHS",
+      "category": "food",
+      "description": "Rhode Island administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.healthyrhode.ri.gov",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "rhode_island"
+      ]
+    },
+    {
+      "id": "ri_medicaid",
+      "name": "RIte Care",
+      "full_name": "RIte Care (Medicaid)",
+      "agency": "EOHHS",
+      "category": "healthcare",
+      "description": "Rhode Island has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 261% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 261,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.healthyrhode.ri.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Rhode Island residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "rhode_island",
+        "expansion"
+      ]
+    },
+    {
+      "id": "ri_tanf",
+      "name": "Rhode Island Works (RIW)",
+      "full_name": "Rhode Island Works (RIW) — Temporary Assistance for Needy Families",
+      "agency": "RI DHS",
+      "category": "cash",
+      "description": "Rhode Island's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $721.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 721,
+        "note": "Family of 3 maximum: $721/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://www.healthyrhode.ri.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "rhode_island"
+      ]
+    }
+  ]
+}

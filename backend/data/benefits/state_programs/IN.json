@@ -1,0 +1,134 @@
+{
+  "state": "IN",
+  "state_name": "Indiana",
+  "medicaid_expansion": true,
+  "programs": [
+    {
+      "id": "in_snap",
+      "name": "SNAP (Indiana)",
+      "full_name": "Supplemental Nutrition Assistance Program — Indiana",
+      "agency": "Indiana FSSA / DFR",
+      "category": "food",
+      "description": "Indiana administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.in.gov/fssa/dfr/snap",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "indiana"
+      ]
+    },
+    {
+      "id": "in_medicaid",
+      "name": "Hoosier Healthwise / HIP",
+      "full_name": "Hoosier Healthwise / HIP (Medicaid)",
+      "agency": "FSSA",
+      "category": "healthcare",
+      "description": "Indiana has expanded Medicaid under the ACA. Adults are covered up to 138% FPL. Children and pregnant women have higher income limits (CHIP up to 250% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 250,
+          "adults_limit_pct_of_fpl": 138
+        },
+        "medicaid_expansion": true
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://www.in.gov/fssa/mma",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Indiana residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "indiana",
+        "expansion"
+      ]
+    },
+    {
+      "id": "in_tanf",
+      "name": "Indiana TANF",
+      "full_name": "Indiana TANF — Temporary Assistance for Needy Families",
+      "agency": "Indiana FSSA / DFR",
+      "category": "cash",
+      "description": "Indiana's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $288.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 288,
+        "note": "Family of 3 maximum: $288/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://www.in.gov/fssa",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "indiana"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "state": "AL",
+  "state_name": "Alabama",
+  "medicaid_expansion": false,
+  "note": "Alabama has NOT expanded Medicaid. Working-age adults without dependent children generally do not qualify for Medicaid unless they have a disability.",
+  "programs": [
+    {
+      "id": "al_snap",
+      "name": "SNAP (Alabama)",
+      "full_name": "Supplemental Nutrition Assistance Program — Alabama",
+      "agency": "Alabama DHR",
+      "category": "food",
+      "description": "Alabama administers federal SNAP with standard federal eligibility rules.",
+      "monthly_benefit_range": {
+        "min_usd": 23,
+        "max_usd": 1751,
+        "note": "Standard federal benefit amounts (FY2025 maximum allotments)"
+      },
+      "eligibility_rules": {
+        "income": {
+          "limit_pct_of_fpl": 130,
+          "note": "Federal gross income limit; net income must be at or below 100% FPL"
+        }
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://mydhhr.alabama.gov",
+        "processing_time_days": "30 (7 for expedited)"
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of residency",
+        "Proof of income",
+        "Social Security numbers"
+      ],
+      "tags": [
+        "food",
+        "ebt_card",
+        "state",
+        "alabama"
+      ]
+    },
+    {
+      "id": "al_medicaid",
+      "name": "Alabama Medicaid",
+      "full_name": "Alabama Medicaid (Medicaid)",
+      "agency": "Alabama Medicaid Agency",
+      "category": "healthcare",
+      "description": "Alabama has NOT expanded Medicaid. Coverage for non-disabled adults without children is very limited. Children, pregnant women, the elderly, and people with disabilities may qualify (CHIP up to 312% FPL).",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 0,
+        "note": "No premium for most enrollees. Covers doctor visits, hospital, prescriptions, and more."
+      },
+      "eligibility_rules": {
+        "income": {
+          "children_limit_pct_of_fpl": 312,
+          "adults_note": "No Medicaid expansion; eligibility for adults is very narrow"
+        },
+        "medicaid_expansion": false
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone",
+          "mail"
+        ],
+        "where": "https://medicaid.alabama.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Photo ID",
+        "Proof of income",
+        "Proof of Alabama residency",
+        "Social Security number or immigration documents"
+      ],
+      "tags": [
+        "healthcare",
+        "insurance",
+        "state",
+        "alabama",
+        "non_expansion"
+      ]
+    },
+    {
+      "id": "al_tanf",
+      "name": "Family Assistance",
+      "full_name": "Family Assistance — Temporary Assistance for Needy Families",
+      "agency": "Alabama DHR",
+      "category": "cash",
+      "description": "Alabama's TANF program provides time-limited cash assistance to low-income families with children. Maximum monthly benefit for a family of 3 is approximately $215.",
+      "monthly_benefit_range": {
+        "min_usd": 0,
+        "max_usd": 215,
+        "note": "Family of 3 maximum: $215/month"
+      },
+      "eligibility_rules": {
+        "who": "Families with dependent children under 18 (or 19 if still in high school)",
+        "income": {
+          "note": "Very low income limits; varies by family size. Generally well below 100% FPL."
+        },
+        "time_limit": "60-month lifetime limit (federal); some states have shorter limits"
+      },
+      "application": {
+        "method": [
+          "online",
+          "in_person",
+          "phone"
+        ],
+        "where": "https://mydhhr.alabama.gov",
+        "processing_time_days": 45
+      },
+      "required_documents": [
+        "Birth certificates for all children",
+        "Social Security numbers",
+        "Photo ID",
+        "Proof of income",
+        "Proof of residency"
+      ],
+      "tags": [
+        "cash",
+        "families",
+        "children",
+        "state",
+        "alabama"
+      ]
+    }
+  ]
+}
